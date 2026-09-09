@@ -1,0 +1,1038 @@
+<!DOCTYPE>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charseE html>t="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Culture | Pure Veg 5-Star Royal Palace Resort & Spa Rajasthan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#FAF4E1',
+                            300: '#E5C882',
+                            400: '#D4AF37',
+                            500: '#C59B27',
+                            600: '#A37E1C',
+                            800: '#644D0F',
+                        },
+                        royal: {
+                            deep: '#0B0D12',
+                            card: '#121620',
+                            navy: '#0F172A',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF1C5 0%, #D4AF37 50%, #997517 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+        }
+        .gold-button {
+            background: linear-gradient(135deg, #D4AF37 0%, #B38F23 100%);
+            transition: all 0.3s ease;
+        }
+        .gold-button:hover {
+            background: linear-gradient(135deg, #E5C882 0%, #D4AF37 100%);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+        .glass-panel {
+            background: rgba(18, 22, 32, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0D12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-royal-deep text-slate-100 dark:bg-royal-deep dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-gold-400 selection:text-black">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-royal-deep/80 backdrop-blur-md border-b border-gold-400/20 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full border border-gold-400/50 flex items-center justify-center bg-gold-400/10 group-hover:border-gold-400 transition-all">
+                    <i data-lucide="crown" class="w-6 h-6 text-gold-400"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-serif font-bold tracking-wider gold-gradient-text block leading-none">THE CULTURE</span>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-gold-300/80 block mt-1">100% Pure Veg Palace • Rajasthan</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium">
+                <a href="#about" class="hover:text-gold-400 transition-colors">The Palace</a>
+                <a href="#rooms" class="hover:text-gold-400 transition-colors">Royal Rooms & Suites</a>
+                <a href="#pools" class="hover:text-gold-400 transition-colors">Pools & Oasis</a>
+                <a href="#dining" class="hover:text-gold-400 transition-colors">Pure Veg Dining</a>
+                <a href="#experiences" class="hover:text-gold-400 transition-colors">Experiences</a>
+            </div>
+
+            <!-- Header Action Buttons -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <!-- Theme Switcher Button -->
+                <button id="themeToggle" onclick="toggleTheme()" class="p-2.5 rounded-full border border-gold-400/30 text-gold-400 hover:bg-gold-400/10 transition-colors" title="Toggle Theme">
+                    <i data-lucide="sun" id="sunIcon" class="w-5 h-5 hidden"></i>
+                    <i data-lucide="moon" id="moonIcon" class="w-5 h-5"></i>
+                </button>
+                <button onclick="openBookingModal()" class="gold-button px-6 py-2.5 rounded-full text-royal-deep font-semibold tracking-wider uppercase text-xs">
+                    Reserve A Room
+                </button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center space-x-3">
+                <button onclick="toggleTheme()" class="p-2 rounded-full border border-gold-400/30 text-gold-400">
+                    <i data-lucide="moon" class="w-5 h-5"></i>
+                </button>
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="text-gold-400 p-2 focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden bg-royal-navy border-b border-gold-400/20 px-6 py-6 space-y-4">
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider hover:text-gold-400 py-1">The Palace</a>
+            <a href="#rooms" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider hover:text-gold-400 py-1">Royal Rooms & Suites</a>
+            <a href="#pools" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider hover:text-gold-400 py-1">Pools & Oasis</a>
+            <a href="#dining" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider hover:text-gold-400 py-1">Pure Veg Dining</a>
+            <a href="#experiences" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider hover:text-gold-400 py-1">Experiences</a>
+            <button onclick="toggleMobileMenu(); openBookingModal()" class="w-full gold-button py-3 rounded-full text-royal-deep font-bold tracking-wider uppercase text-xs mt-4">
+                Reserve A Room
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Royal Palace Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=2000&q=85" 
+                 alt="Grand Royal Palace Resort in Rajasthan" 
+                 class="w-full h-full object-cover object-center transform scale-105 animate-pulse duration-[10000ms]">
+            <div class="absolute inset-0 bg-gradient-to-t from-royal-deep via-royal-deep/60 to-black/50"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-20 flex flex-col items-center">
+            <!-- 5-Star Rating Badge -->
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-gold-400/40 bg-gold-400/10 backdrop-blur-md mb-6">
+                <div class="flex text-gold-400">
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                </div>
+                <span class="text-xs uppercase tracking-widest text-gold-300 font-medium">Udaipur, Rajasthan • 100% Pure Veg 5-Star Sanctuary</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight text-white leading-tight mb-6">
+                Where Rajputana Majesty Meets <span class="gold-gradient-text italic block sm:inline">Unmatched Luxury</span>
+            </h1>
+
+            <p class="max-w-2xl text-lg sm:text-xl text-slate-300 font-light leading-relaxed mb-10">
+                Immerse yourself in royal heritage at <strong class="text-gold-400 font-semibold">The Culture</strong>, Rajasthan. Experience personal butler care, private infinity pools, palatial Haveli rooms, and 100% Pure Vegetarian gourmet fine dining.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                <button onclick="openBookingModal()" class="w-full sm:w-auto gold-button px-8 py-4 rounded-full text-royal-deep font-bold tracking-widest uppercase text-sm flex items-center justify-center space-x-2 shadow-2xl">
+                    <span>View Tariffs & Reserve</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+                <a href="#about" class="w-full sm:w-auto px-8 py-4 rounded-full border border-gold-400/40 hover:bg-gold-400/10 text-gold-300 font-medium tracking-widest uppercase text-sm transition-all text-center backdrop-blur-md">
+                    Explore The Palace
+                </a>
+            </div>
+
+            <!-- Quick Reservation Bar -->
+            <div class="w-full max-w-4xl mt-16 glass-panel rounded-2xl p-4 sm:p-6 shadow-2xl border border-gold-400/30">
+                <form onsubmit="event.preventDefault(); openBookingModal();" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-center">
+                    <div class="text-left border-b md:border-b-0 md:border-r border-gold-400/20 pb-2 md:pb-0 md:pr-4">
+                        <label class="block text-[10px] uppercase tracking-widest text-gold-400 font-bold mb-1">Check-In</label>
+                        <input type="date" value="2026-08-01" class="w-full bg-transparent text-slate-200 text-sm focus:outline-none cursor-pointer">
+                    </div>
+                    <div class="text-left border-b md:border-b-0 md:border-r border-gold-400/20 pb-2 md:pb-0 md:pr-4">
+                        <label class="block text-[10px] uppercase tracking-widest text-gold-400 font-bold mb-1">Check-Out</label>
+                        <input type="date" value="2026-08-05" class="w-full bg-transparent text-slate-200 text-sm focus:outline-none cursor-pointer">
+                    </div>
+                    <div class="text-left border-b md:border-b-0 md:border-r border-gold-400/20 pb-2 md:pb-0 md:pr-4">
+                        <label class="block text-[10px] uppercase tracking-widest text-gold-400 font-bold mb-1">Guests & Category</label>
+                        <select class="w-full bg-transparent text-slate-200 text-sm focus:outline-none cursor-pointer">
+                            <option class="bg-royal-navy text-white">2 Adults • Courtyard Room (₹18,500)</option>
+                            <option class="bg-royal-navy text-white">2 Adults • Royal Jharokha Suite (₹32,000)</option>
+                            <option class="bg-royal-navy text-white">2 Adults • Maharaja Suite (₹75,000)</option>
+                            <option class="bg-royal-navy text-white">2 Adults, 1 Child • Lake Villa (₹1,45,000)</option>
+                            <option class="bg-royal-navy text-white">4 Adults • Crown Presidential (₹2,80,000)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full gold-button py-3 rounded-xl text-royal-deep font-bold text-xs uppercase tracking-wider">
+                            Check Availability
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- PALACE OVERVIEW / ABOUT -->
+    <section id="about" class="py-24 relative overflow-hidden bg-royal-deep">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left Image Grid -->
+                <div class="relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden border border-gold-400/30 shadow-2xl">
+                        <!-- Updated to pristine royal palace resort image without people -->
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80" 
+                             alt="The Culture Royal Palace Resort Estate" 
+                             class="w-full h-[480px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 w-2/3 rounded-2xl overflow-hidden border-2 border-gold-400/50 shadow-2xl z-20 hidden sm:block">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80" 
+                             alt="The Crown Royal Presidential Suite" 
+                             class="w-full h-56 object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Decorative Badge -->
+                    <div class="absolute -top-6 -left-6 bg-gold-400 text-royal-deep p-6 rounded-2xl z-30 shadow-2xl font-serif text-center hidden sm:block">
+                        <span class="block text-3xl font-bold">120+</span>
+                        <span class="text-xs uppercase tracking-widest font-sans font-semibold">Acres in Udaipur</span>
+                    </div>
+                </div>
+
+                <!-- Right Description Content -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-gold-400 text-xs font-bold uppercase tracking-[0.25em]">
+                        <span class="w-8 h-[1px] bg-gold-400"></span>
+                        <span>Welcome To The Culture Rajasthan</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold leading-tight">
+                        A Kingdom Crafted for <span class="gold-gradient-text">Royalty & Pure Delights</span>
+                    </h2>
+
+                    <p class="text-slate-300 font-light leading-relaxed text-base sm:text-lg">
+                        Set against the picturesque Aravalli Hills in Rajasthan, <strong>The Culture</strong> stands as a landmark of 5-star palatial luxury. As a <strong>100% Pure Vegetarian resort</strong>, we honor ancient royal traditions with pure Sattvik and gourmet culinary craftsmanship.
+                    </p>
+
+                    <!-- Key Highlights Grid -->
+                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-gold-400/20">
+                        <div class="flex items-start space-x-3">
+                            <div class="p-2.5 rounded-lg bg-gold-400/10 border border-gold-400/30 text-gold-400">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-white text-base">24/7 Royal Butler</h4>
+                                <p class="text-xs text-slate-400">Personal valet trained in royal etiquette</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="p-2.5 rounded-lg bg-gold-400/10 border border-gold-400/30 text-gold-400">
+                                <i data-lucide="leaf" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-white text-base">100% Pure Veg Cuisine</h4>
+                                <p class="text-xs text-slate-400">Royal Rajasthani Thali & Sattvik Feasts</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="p-2.5 rounded-lg bg-gold-400/10 border border-gold-400/30 text-gold-400">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-white text-base">Ayurvedic Spa Oasis</h4>
+                                <p class="text-xs text-slate-400">Traditional Indian herbal therapies</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="p-2.5 rounded-lg bg-gold-400/10 border border-gold-400/30 text-gold-400">
+                                <i data-lucide="plane" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-white text-base">Helipad & Pickups</h4>
+                                <p class="text-xs text-slate-400">Vintage car & luxury transfers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="openBookingModal()" class="gold-button px-8 py-3.5 rounded-full text-royal-deep font-bold tracking-wider text-xs uppercase shadow-xl">
+                            Experience Royal Hospitality
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SWIMMING POOLS & OASIS SECTION -->
+    <section id="pools" class="py-24 bg-royal-navy/60 border-y border-gold-400/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 text-gold-400 text-xs font-bold uppercase tracking-[0.25em] mb-3">
+                    <span class="w-8 h-[1px] bg-gold-400"></span>
+                    <span>Aquatic Majesty</span>
+                    <span class="w-8 h-[1px] bg-gold-400"></span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold">Royal Swimming Pools & Oasis</h2>
+                <p class="text-slate-400 mt-4 text-base font-light">
+                    Dive into regal tranquility. Our resort features heated infinity pools overlooking Lake Pichola and private thermal step-well lagoons.
+                </p>
+            </div>
+
+            <!-- Pool Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Pool 1 -->
+                <div class="glass-panel rounded-2xl overflow-hidden group border border-gold-400/20 hover:border-gold-400/60 transition-all duration-300">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" 
+                             alt="The Grand Infinity Pool" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-royal-deep via-transparent to-transparent"></div>
+                        <span class="absolute top-4 right-4 bg-gold-400 text-royal-deep text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                            Sunset Lake View
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-2">The Celestial Infinity Pool</h3>
+                        <p class="text-slate-300 text-sm font-light mb-4 leading-relaxed">
+                            A temperature-controlled 150-meter infinity pool overlooking Rajasthan's lake horizon, complete with poolside royal cabanas.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gold-300 border-t border-gold-400/10 pt-4">
+                            <span class="flex items-center space-x-1"><i data-lucide="thermometer-sun" class="w-4 h-4"></i> <span>Heated 28°C</span></span>
+                            <span class="flex items-center space-x-1"><i data-lucide="glass-water" class="w-4 h-4"></i> <span>Poolside Bar</span></span>
+                            <span class="flex items-center space-x-1"><i data-lucide="clock" class="w-4 h-4"></i> <span>24 Hours</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pool 2 -->
+                <div class="glass-panel rounded-2xl overflow-hidden group border border-gold-400/20 hover:border-gold-400/60 transition-all duration-300">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" 
+                             alt="Private Royal Villa Pool" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-royal-deep via-transparent to-transparent"></div>
+                        <span class="absolute top-4 right-4 bg-gold-400 text-royal-deep text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                            Private Haveli Pool
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Royal Plunge Pools</h3>
+                        <p class="text-slate-300 text-sm font-light mb-4 leading-relaxed">
+                            Reserved exclusively for our Villa & Presidential Suite guests, featuring private jacuzzi jets and floating traditional Pure Veg Rajasthani breakfast trays.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gold-300 border-t border-gold-400/10 pt-4">
+                            <span class="flex items-center space-x-1"><i data-lucide="lock" class="w-4 h-4"></i> <span>100% Private</span></span>
+                            <span class="flex items-center space-x-1"><i data-lucide="waves" class="w-4 h-4"></i> <span>Hydro Jacuzzi</span></span>
+                            <span class="flex items-center space-x-1"><i data-lucide="coffee" class="w-4 h-4"></i> <span>Floating Dining</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pool 3 -->
+                <div class="glass-panel rounded-2xl overflow-hidden group border border-gold-400/20 hover:border-gold-400/60 transition-all duration-300">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=800&q=80" 
+                             alt="The Royal Marble Thermal Bath" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-royal-deep via-transparent to-transparent"></div>
+                        <span class="absolute top-4 right-4 bg-gold-400 text-royal-deep text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                            Bawri Sanctuary
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Royal Step-Well Bathhouse</h3>
+                        <p class="text-slate-300 text-sm font-light mb-4 leading-relaxed">
+                            Inspired by ancient Rajasthani step-wells (Bawri), carved in pure Makrana white marble with gold leaf arches and ambient candlelight.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gold-300 border-t border-gold-400/10 pt-4">
+                            <span class="flex items-center space-x-1"><i data-lucide="sparkles" class="w-4 h-4"></i> <span>Herbal Waters</span></span>
+                            <span class="flex items-center space-x-1"><i data-lucide="sun" class="w-4 h-4"></i> <span>Steam Bath</span></span>
+                            <span class="flex items-center space-x-1"><i data-lucide="shield" class="w-4 h-4"></i> <span>Adults Sanctuary</span></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ROOMS & SUITES WITH ALL TARIFF CATEGORIES (INCL. UNDER ₹35,000) -->
+    <section id="rooms" class="py-24 bg-royal-deep relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <div class="inline-flex items-center space-x-2 text-gold-400 text-xs font-bold uppercase tracking-[0.25em] mb-3">
+                        <span class="w-8 h-[1px] bg-gold-400"></span>
+                        <span>Opulent Accommodations</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold">Palace Rooms & Royal Suites</h2>
+                </div>
+                <p class="text-slate-400 max-w-md mt-4 md:mt-0 text-sm font-light">
+                    Every room at The Culture Rajasthan is a sanctuary of royal grandeur, offering carved balconies (Jharokhas), hand-woven carpets, and 24/7 personal butler service.
+                </p>
+            </div>
+
+            <!-- Room Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- NEW CATEGORY 1: Heritage Courtyard Room (₹18,500) -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-gold-400/30 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Heritage Courtyard Room Interior" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-royal-deep/80 backdrop-blur-md px-3 py-1 rounded-full border border-gold-400/40 text-[11px] text-gold-300 uppercase tracking-widest font-semibold">
+                                650 Sq Ft
+                            </div>
+                            <div class="absolute top-4 right-4 bg-gold-400/20 backdrop-blur-md border border-gold-400/50 text-gold-300 font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-widest">
+                                Classic Luxury
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-2xl font-serif font-bold text-white">Heritage Courtyard Room</h3>
+                            </div>
+                            <p class="text-slate-300 text-xs font-light mb-6 leading-relaxed">
+                                Elegantly appointed with traditional Rajasthani block prints, teakwood king bed, marble ensuite, and direct access to the lotus courtyard.
+                            </p>
+                            <!-- Amenities -->
+                            <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 mb-6">
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Teakwood King Bed</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Lotus Courtyard Access</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>24/7 Butler Service</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Pure Veg Breakfast</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price & CTA Footer -->
+                    <div class="p-6 pt-0 border-t border-gold-400/10 mt-auto">
+                        <div class="flex items-baseline justify-between mb-4 pt-4">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Starting Tariff</span>
+                                <span class="text-3xl font-serif font-bold gold-gradient-text">₹18,500</span>
+                                <span class="text-xs text-slate-400"> / night (+ GST)</span>
+                            </div>
+                        </div>
+                        <button onclick="selectSuiteAndBook('Heritage Courtyard Room', 18500)" class="w-full gold-button py-3 rounded-xl text-royal-deep font-bold text-xs uppercase tracking-wider">
+                            Reserve Room
+                        </button>
+                    </div>
+                </div>
+
+                <!-- NEW CATEGORY 2: Royal Jharokha Deluxe Suite (₹32,000) -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-gold-400/30 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Royal Jharokha Deluxe Suite" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-royal-deep/80 backdrop-blur-md px-3 py-1 rounded-full border border-gold-400/40 text-[11px] text-gold-300 uppercase tracking-widest font-semibold">
+                                900 Sq Ft
+                            </div>
+                            <div class="absolute top-4 right-4 bg-gold-400 text-royal-deep font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-widest">
+                                Best Value
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-2xl font-serif font-bold text-white">Royal Jharokha Deluxe Suite</h3>
+                            </div>
+                            <p class="text-slate-300 text-xs font-light mb-6 leading-relaxed">
+                                Features a handcrafted stone Jharokha (overhanging balcony) with daybed seating, copper bathtub, and views of the Aravalli hills.
+                            </p>
+                            <!-- Amenities -->
+                            <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 mb-6">
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Private Jharokha Balcony</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Copper Soaking Tub</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Royal High Tea Included</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>24/7 Butler Service</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price & CTA Footer -->
+                    <div class="p-6 pt-0 border-t border-gold-400/10 mt-auto">
+                        <div class="flex items-baseline justify-between mb-4 pt-4">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Starting Tariff</span>
+                                <span class="text-3xl font-serif font-bold gold-gradient-text">₹32,000</span>
+                                <span class="text-xs text-slate-400"> / night (+ GST)</span>
+                            </div>
+                        </div>
+                        <button onclick="selectSuiteAndBook('Royal Jharokha Deluxe Suite', 32000)" class="w-full gold-button py-3 rounded-xl text-royal-deep font-bold text-xs uppercase tracking-wider">
+                            Reserve Suite
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PREVIOUS CATEGORY 1: Maharaja Heritage Suite (₹75,000) -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-gold-400/30 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Maharaja Grand Suite Bedroom" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-royal-deep/80 backdrop-blur-md px-3 py-1 rounded-full border border-gold-400/40 text-[11px] text-gold-300 uppercase tracking-widest font-semibold">
+                                1,200 Sq Ft
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-2xl font-serif font-bold text-white">The Maharaja Heritage Suite</h3>
+                            </div>
+                            <p class="text-slate-300 text-xs font-light mb-6 leading-relaxed">
+                                Adorned with gold-embroidered silk sheets, marble bathroom with standalone jacuzzi, and a Jharokha balcony overlooking the royal gardens.
+                            </p>
+                            <!-- Amenities -->
+                            <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 mb-6">
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>King Emperor Bed</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Palace Garden Terrace</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>24/7 Personal Butler</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Complimentary Spa</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price & CTA Footer -->
+                    <div class="p-6 pt-0 border-t border-gold-400/10 mt-auto">
+                        <div class="flex items-baseline justify-between mb-4 pt-4">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Starting Tariff</span>
+                                <span class="text-3xl font-serif font-bold gold-gradient-text">₹75,000</span>
+                                <span class="text-xs text-slate-400"> / night (+ GST)</span>
+                            </div>
+                        </div>
+                        <button onclick="selectSuiteAndBook('The Maharaja Heritage Suite', 75000)" class="w-full gold-button py-3 rounded-xl text-royal-deep font-bold text-xs uppercase tracking-wider">
+                            Reserve Suite
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PREVIOUS CATEGORY 2: Royal Pool Villa (₹1,45,000) -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-gold-400/30 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Royal Pool Villa Living Room" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-royal-deep/80 backdrop-blur-md px-3 py-1 rounded-full border border-gold-400/40 text-[11px] text-gold-300 uppercase tracking-widest font-semibold">
+                                2,400 Sq Ft
+                            </div>
+                            <div class="absolute top-4 right-4 bg-gold-400 text-royal-deep font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-widest">
+                                Most Popular
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-2xl font-serif font-bold text-white">Royal Lake Villa & Pool</h3>
+                            </div>
+                            <p class="text-slate-300 text-xs font-light mb-6 leading-relaxed">
+                                A secluded Haveli villa featuring its own heated plunge pool, private courtyard, outdoor rain shower, and private dining gazebo.
+                            </p>
+                            <!-- Amenities -->
+                            <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 mb-6">
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Private Heated Pool</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Personal Master Chef</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Airport Vintage Car</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Royal Welcome Drink</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price & CTA Footer -->
+                    <div class="p-6 pt-0 border-t border-gold-400/10 mt-auto">
+                        <div class="flex items-baseline justify-between mb-4 pt-4">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Starting Tariff</span>
+                                <span class="text-3xl font-serif font-bold gold-gradient-text">₹1,45,000</span>
+                                <span class="text-xs text-slate-400"> / night (+ GST)</span>
+                            </div>
+                        </div>
+                        <button onclick="selectSuiteAndBook('Royal Lake Villa & Pool', 145000)" class="w-full gold-button py-3 rounded-xl text-royal-deep font-bold text-xs uppercase tracking-wider">
+                            Reserve Villa
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PREVIOUS CATEGORY 3: Imperial Crown Suite (₹2,80,000) -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-gold-400/30 flex flex-col justify-between group md:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Imperial Crown Presidential Suite" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-royal-deep/80 backdrop-blur-md px-3 py-1 rounded-full border border-gold-400/40 text-[11px] text-gold-300 uppercase tracking-widest font-semibold">
+                                4,500 Sq Ft
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-2xl font-serif font-bold text-white">The Crown Royal Presidential</h3>
+                            </div>
+                            <p class="text-slate-300 text-xs font-light mb-6 leading-relaxed">
+                                The ultimate expression of luxury. Features two master bedrooms, private screening room, grand dining room for 10, private spa treatment room, and helipad access.
+                            </p>
+                            <!-- Amenities -->
+                            <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 mb-6">
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>2 Royal Bedrooms</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>In-Suite Spa & Sauna</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Private Helipad Access</span></span>
+                                <span class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i><span>Exclusive Security</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price & CTA Footer -->
+                    <div class="p-6 pt-0 border-t border-gold-400/10 mt-auto">
+                        <div class="flex items-baseline justify-between mb-4 pt-4">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Starting Tariff</span>
+                                <span class="text-3xl font-serif font-bold gold-gradient-text">₹2,80,000</span>
+                                <span class="text-xs text-slate-400"> / night (+ GST)</span>
+                            </div>
+                        </div>
+                        <button onclick="selectSuiteAndBook('The Crown Royal Presidential', 280000)" class="w-full gold-button py-3 rounded-xl text-royal-deep font-bold text-xs uppercase tracking-wider">
+                            Reserve Presidential
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FINE DINING & GASTRONOMY (PURE VEGETARIAN) -->
+    <section id="dining" class="py-24 bg-royal-navy/40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center space-x-2 text-gold-400 text-xs font-bold uppercase tracking-[0.25em] mb-3">
+                        <span class="w-8 h-[1px] bg-gold-400"></span>
+                        <span>100% Pure Vegetarian Royalty</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold mb-6">Pure Veg Rajasthani Feasts & Fine Dining</h2>
+                    <p class="text-slate-300 font-light leading-relaxed mb-8">
+                        Embark on a regal pure vegetarian culinary voyage curated by master heritage chefs. Enjoy authentic royal Shahi Thalis, Dal Baati Churma, Paneer Pasanda, Gatte ki Sabzi, saffron sweets, and gourmet continental vegetarian cuisine served in silver dishware under starlit courtyards.
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- Restaurant 1 -->
+                        <div class="p-4 rounded-xl glass-panel border border-gold-400/20 hover:border-gold-400/50 transition-all flex items-center space-x-4">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80" alt="Restaurant Interior" class="w-20 h-20 rounded-lg object-cover">
+                            <div>
+                                <h4 class="text-lg font-serif font-bold text-white">Sheesh Mahal (Pure Veg Courtyard)</h4>
+                                <p class="text-xs text-slate-400">Traditional pure vegetarian royal recipes passed down by Mewar royal palace kitchens.</p>
+                                <span class="text-[10px] text-gold-400 uppercase tracking-widest mt-1 inline-block">100% Pure Veg • Dress Code: Traditional / Formal</span>
+                            </div>
+                        </div>
+
+                        <!-- Restaurant 2 -->
+                        <div class="p-4 rounded-xl glass-panel border border-gold-400/20 hover:border-gold-400/50 transition-all flex items-center space-x-4">
+                            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=300&q=80" alt="Pure Veg Gourmet Feast" class="w-20 h-20 rounded-lg object-cover">
+                            <div>
+                                <h4 class="text-lg font-serif font-bold text-white">Jharokha Over The Lake</h4>
+                                <p class="text-xs text-slate-400">Over-water floating pavilions serving gourmet vegetarian delicacies and royal high tea.</p>
+                                <span class="text-[10px] text-gold-400 uppercase tracking-widest mt-1 inline-block">100% Pure Veg • Dress Code: Smart Casual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Big Image Banner -->
+                <div class="relative rounded-2xl overflow-hidden border border-gold-400/40 shadow-2xl h-[520px]">
+                    <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=1200&q=80" 
+                         alt="Pure Vegetarian Royal Feast Dining Setup" 
+                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royal-deep via-transparent to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8 p-6 glass-panel rounded-xl border border-gold-400/30">
+                        <span class="text-gold-400 text-xs uppercase tracking-widest font-semibold block mb-1">Pure Vegetarian Candlelight Experience</span>
+                        <h3 class="text-xl font-serif font-bold text-white">Curated Lake Pavilion Dining</h3>
+                        <p class="text-xs text-slate-300 mt-1">Book a private royal dining table surrounded by floating oil lamps and live classical Sarangi & Sitar melodies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROYAL EXPERIENCES & GALLERY -->
+    <section id="experiences" class="py-24 bg-royal-deep relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 text-gold-400 text-xs font-bold uppercase tracking-[0.25em] mb-3">
+                    <span class="w-8 h-[1px] bg-gold-400"></span>
+                    <span>Rajasthani Heritage</span>
+                    <span class="w-8 h-[1px] bg-gold-400"></span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold">Unforgettable Experiences</h2>
+                <p class="text-slate-400 mt-4 text-base font-light">
+                    Every moment spent at The Culture Rajasthan is designed to immerse you in timeless royal traditions.
+                </p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                
+                <div class="md:col-span-2 relative h-80 rounded-2xl overflow-hidden group border border-gold-400/20">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Royal Spa Bath" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="text-gold-400 text-xs font-bold uppercase tracking-widest">Wellness</span>
+                        <h4 class="text-2xl font-serif font-bold text-white">Ayurvedic Spa & Herbal Oil Therapies</h4>
+                    </div>
+                </div>
+
+                <div class="relative h-80 rounded-2xl overflow-hidden group border border-gold-400/20">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Private Beach Sanctuary" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="text-gold-400 text-xs font-bold uppercase tracking-widest">Leisure</span>
+                        <h4 class="text-xl font-serif font-bold text-white">Private Sunset Boat Cruises</h4>
+                    </div>
+                </div>
+
+                <div class="relative h-80 rounded-2xl overflow-hidden group border border-gold-400/20">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Royal Weddings & Events" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="text-gold-400 text-xs font-bold uppercase tracking-widest">Grand Events</span>
+                        <h4 class="text-xl font-serif font-bold text-white">Destination Palace Weddings</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS FROM GUESTS -->
+    <section class="py-24 bg-royal-navy/30 border-t border-gold-400/10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex justify-center text-gold-400 mb-6">
+                <i data-lucide="quote" class="w-12 h-12"></i>
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-serif font-bold italic leading-relaxed text-slate-100 max-w-4xl mx-auto">
+                "Staying at The Culture in Rajasthan was like stepping into an era of maharajas. The private lake-view pool villa, traditional welcoming folk dance, and 100% pure vegetarian royal thali redefined 5-star luxury for us."
+            </h2>
+            <div class="mt-8">
+                <p class="font-serif font-bold text-gold-400 text-lg">Vikramaditya & Radhika Singhania</p>
+                <span class="text-xs text-slate-400 uppercase tracking-widest">Verified Guests • Royal Lake Villa</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-royal-deep border-t border-gold-400/20 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full border border-gold-400/50 flex items-center justify-center bg-gold-400/10">
+                            <i data-lucide="crown" class="w-5 h-5 text-gold-400"></i>
+                        </div>
+                        <span class="text-xl font-serif font-bold gold-gradient-text tracking-wider">THE CULTURE</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light">
+                        The Culture is a premier 100% Pure Vegetarian 5-star luxury palace resort in Rajasthan, India, delivering regal hospitality and timeless grandeur.
+                    </p>
+                    <div class="flex space-x-4 text-gold-400 pt-2">
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><a href="#about" class="hover:text-gold-400 transition-colors">Palace Heritage</a></li>
+                        <li><a href="#rooms" class="hover:text-gold-400 transition-colors">Rooms & ₹ Tariffs</a></li>
+                        <li><a href="#pools" class="hover:text-gold-400 transition-colors">Infinity Swimming Pools</a></li>
+                        <li><a href="#dining" class="hover:text-gold-400 transition-colors">Pure Veg Dining</a></li>
+                        <li><a href="#experiences" class="hover:text-gold-400 transition-colors">Ayurveda Spa & Helipad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-4">Royal Concierge</h4>
+                    <ul class="space-y-3 text-xs text-slate-300">
+                        <li class="flex items-start space-x-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                            <span>The Culture Palace, Lake Palace Road, Udaipur, Rajasthan - 313001</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                            <span>+91 1800 200 7777 / +91 294 288 9999</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                            <span>reservations@thecultureresort.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-4">Royal Newsletter</h4>
+                    <p class="text-xs text-slate-400 mb-3">Subscribe for private invitations to royal festival galas and suite upgrades.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your Email Address" class="bg-royal-card text-xs text-white px-3 py-2.5 rounded-l-lg border border-gold-400/30 focus:outline-none w-full">
+                        <button class="gold-button px-4 rounded-r-lg text-royal-deep font-bold text-xs uppercase">Join</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gold-400/10 pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500">
+                <p>© 2026 The Culture 100% Pure Veg 5-Star Palace Resort Rajasthan. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-300">Terms of Royal Service</a>
+                    <a href="#" class="hover:text-slate-300">Concierge Desk</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- RESERVATION & TARIFF CALCULATOR MODAL IN RUPEES -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="glass-panel w-full max-w-2xl rounded-2xl overflow-hidden border border-gold-400/50 shadow-2xl relative animate-fadeIn">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-gold-400/20 flex justify-between items-center bg-royal-navy">
+                <div class="flex items-center space-x-3">
+                    <i data-lucide="crown" class="w-6 h-6 text-gold-400"></i>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold text-white">Royal Reservation & Tariff Calculator</h3>
+                        <p class="text-xs text-gold-300">The Culture Palace Resort • Rajasthan, India</p>
+                    </div>
+                </div>
+                <button onclick="closeBookingModal()" class="text-slate-400 hover:text-white p-2">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Modal Form Body -->
+            <form id="reservationForm" onsubmit="handleReservationSubmit(event)" class="p-6 space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-1">Full Guest Name</label>
+                        <input type="text" required placeholder="e.g. Vikramaditya Singh" class="w-full bg-royal-card border border-gold-400/30 rounded-lg p-3 text-xs text-white focus:border-gold-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-1">Email Address</label>
+                        <input type="email" required placeholder="guest@royalty.in" class="w-full bg-royal-card border border-gold-400/30 rounded-lg p-3 text-xs text-white focus:border-gold-400 focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-1">Room / Suite Category</label>
+                        <select id="modalSuiteSelect" onchange="updateTariffCalculation()" class="w-full bg-royal-card border border-gold-400/30 rounded-lg p-3 text-xs text-white focus:border-gold-400 focus:outline-none">
+                            <option value="18500">Heritage Courtyard Room (₹18,500/night)</option>
+                            <option value="32000">Royal Jharokha Deluxe Suite (₹32,000/night)</option>
+                            <option value="75000">Maharaja Heritage Suite (₹75,000/night)</option>
+                            <option value="145000">Royal Lake Villa & Pool (₹1,45,000/night)</option>
+                            <option value="280000">Crown Royal Presidential (₹2,80,000/night)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-1">Check-In</label>
+                        <input type="date" id="modalCheckIn" value="2026-08-01" onchange="updateTariffCalculation()" class="w-full bg-royal-card border border-gold-400/30 rounded-lg p-3 text-xs text-white focus:border-gold-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-1">Check-Out</label>
+                        <input type="date" id="modalCheckOut" value="2026-08-04" onchange="updateTariffCalculation()" class="w-full bg-royal-card border border-gold-400/30 rounded-lg p-3 text-xs text-white focus:border-gold-400 focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- Live Tariff Breakdown Box in Rupees -->
+                <div class="p-4 rounded-xl bg-royal-navy border border-gold-400/20 space-y-2 mt-2">
+                    <div class="flex justify-between text-xs text-slate-300">
+                        <span>Selected Duration:</span>
+                        <span id="calcNights" class="font-bold text-white">3 Nights</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-slate-300">
+                        <span>Base Rate:</span>
+                        <span id="calcBaseRate" class="font-bold text-white">₹55,500</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-slate-300">
+                        <span>Luxury Hospitality GST & Service Fee (18%):</span>
+                        <span id="calcTaxes" class="font-bold text-white">₹9,990</span>
+                    </div>
+                    <div class="border-t border-gold-400/20 pt-2 flex justify-between text-sm font-bold">
+                        <span class="text-gold-400">Total Tariff (INR):</span>
+                        <span id="calcTotal" class="text-gold-400 text-lg">₹65,490</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full gold-button py-4 rounded-xl text-royal-deep font-bold text-xs uppercase tracking-widest shadow-xl mt-4">
+                    Confirm & Request Butler Booking Call
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Dark / Light Theme Switching
+        function toggleTheme() {
+            const html = document.documentElement;
+            const sunIcon = document.getElementById('sunIcon');
+            const moonIcon = document.getElementById('moonIcon');
+
+            if (html.classList.contains('light')) {
+                html.classList.remove('light');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                html.classList.add('light');
+                moonIcon.classList.add('hidden');
+                sunIcon.classList.remove('hidden');
+            }
+        }
+
+        // Mobile Menu Drawer Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Booking Modal Logic
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.remove('hidden');
+            updateTariffCalculation();
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        // Quick Select Suite from Room Cards
+        function selectSuiteAndBook(suiteName, pricePerNightINR) {
+            const select = document.getElementById('modalSuiteSelect');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].value == pricePerNightINR) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+            openBookingModal();
+        }
+
+        // Dynamic Tariff Calculator in INR (₹)
+        function updateTariffCalculation() {
+            const suiteRate = parseFloat(document.getElementById('modalSuiteSelect').value);
+            const checkInVal = new Date(document.getElementById('modalCheckIn').value);
+            const checkOutVal = new Date(document.getElementById('modalCheckOut').value);
+
+            let timeDiff = checkOutVal.getTime() - checkInVal.getTime();
+            let nights = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+            if (isNaN(nights) || nights <= 0) {
+                nights = 1;
+            }
+
+            const baseTotal = suiteRate * nights;
+            const taxTotal = baseTotal * 0.18;
+            const grandTotal = baseTotal + taxTotal;
+
+            document.getElementById('calcNights').innerText = `${nights} Night(s)`;
+            document.getElementById('calcBaseRate').innerText = `₹${baseTotal.toLocaleString('en-IN')}`;
+            document.getElementById('calcTaxes').innerText = `₹${Math.round(taxTotal).toLocaleString('en-IN')}`;
+            document.getElementById('calcTotal').innerText = `₹${Math.round(grandTotal).toLocaleString('en-IN')}`;
+        }
+
+        // Submit Reservation Handler
+        function handleReservationSubmit(e) {
+            e.preventDefault();
+            closeBookingModal();
+            
+            // Custom Royal Notification Overlay
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-8 right-8 z-50 glass-panel border border-gold-400 p-6 rounded-2xl shadow-2xl max-w-md bg-royal-navy text-white flex items-start space-x-4 border-l-4 border-l-gold-400';
+            notification.innerHTML = `
+                <div class="p-2 bg-gold-400/20 rounded-full text-gold-400">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h4 class="font-serif font-bold text-gold-400 text-lg">Royal Reservation Requested</h4>
+                    <p class="text-xs text-slate-300 mt-1">Khamma Ghani! Your personal butler at The Culture, Rajasthan has received your request and will call you within 15 minutes to confirm flight & arrival details.</p>
+                </div>
+            `;
+            document.body.appendChild(notification);
+            lucide.createIcons();
+
+            setTimeout(() => {
+                notification.remove();
+            }, 6000);
+        }
+
+        // Close Modal when clicking background overlay
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target === modal) {
+                closeBookingModal();
+            }
+        }
+    </script>
+</body>
+</html>
